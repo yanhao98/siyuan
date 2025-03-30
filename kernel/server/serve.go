@@ -145,7 +145,7 @@ func Serve(fastMode bool) {
 	sessionStore.Options(sessions.Options{
 		Path:   "/",
 		Secure: util.SSL,
-		//MaxAge:   60 * 60 * 24 * 7, // 默认是 Session
+		MaxAge:   60 * 60 * 24 * 7 * 4, // 默认是 Session
 		HttpOnly: true,
 	})
 	ginServer.Use(sessions.Sessions("siyuan", sessionStore))
